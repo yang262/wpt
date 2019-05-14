@@ -1,0 +1,21 @@
+interface EntriesA {
+  readonly setlike<DOMString>;
+  static void entries();
+};
+
+interface EntriesB {
+  readonly setlike<DOMString>;
+  static readonly attribute long entries;
+};
+
+interface EntriesE : ReadOnly {
+  void entries();
+};
+
+interface EntriesF : ReadOnly {
+  readonly attribute long entries;
+};
+
+interface EntriesG : ReadOnly {
+  const long entries = 0;
+};

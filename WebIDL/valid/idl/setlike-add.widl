@@ -1,0 +1,77 @@
+interface ReadOnly {
+  readonly setlike<DOMString>;
+};
+
+interface ReadWrite {
+  setlike<DOMString>;
+};
+
+interface AddA {
+  setlike<DOMString>;
+  void add();
+};
+
+interface AddB {
+  readonly setlike<DOMString>;
+  void add();
+};
+
+interface AddC {
+  readonly setlike<DOMString>;
+  readonly attribute long add;
+};
+
+interface AddD {
+  readonly setlike<DOMString>;
+  const long add = 0;
+};
+
+interface AddE : ReadOnly {
+  void add();
+};
+
+interface AddF : ReadOnly {
+  readonly attribute long add;
+};
+
+interface AddG : ReadOnly {
+  const long add = 0;
+};
+
+interface AddH : ReadWrite {
+  void add();
+};
+
+interface AddI : ReadWrite {
+  readonly attribute long add;
+};
+
+interface AddJ : ReadWrite {
+  const long add = 0;
+};
+
+interface AddK {
+  readonly setlike<DOMString>;
+  static void add();
+};
+
+interface AddL {
+  readonly setlike<DOMString>;
+  static readonly attribute long add;
+};
+
+interface AddM1 {
+  static void add();
+};
+
+interface AddM2 : AddM1 {
+  readonly setlike<DOMString>;
+};
+
+interface AddN1 {
+  static readonly attribute long add;
+};
+
+interface AddN2 : AddN1 {
+  readonly setlike<DOMString>;
+};

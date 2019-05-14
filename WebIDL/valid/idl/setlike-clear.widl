@@ -1,0 +1,77 @@
+interface ReadOnly {
+  readonly setlike<DOMString>;
+};
+
+interface ReadWrite {
+  setlike<DOMString>;
+};
+
+interface ClearA {
+  setlike<DOMString>;
+  void clear();
+};
+
+interface ClearB {
+  readonly setlike<DOMString>;
+  void clear();
+};
+
+interface ClearC {
+  readonly setlike<DOMString>;
+  readonly attribute long clear;
+};
+
+interface ClearD {
+  readonly setlike<DOMString>;
+  const long clear = 0;
+};
+
+interface ClearE : ReadOnly {
+  void clear();
+};
+
+interface ClearF : ReadOnly {
+  readonly attribute long clear;
+};
+
+interface ClearG : ReadOnly {
+  const long clear = 0;
+};
+
+interface ClearH : ReadWrite {
+  void clear();
+};
+
+interface ClearI : ReadWrite {
+  readonly attribute long clear;
+};
+
+interface ClearJ : ReadWrite {
+  const long clear = 0;
+};
+
+interface ClearK {
+  readonly setlike<DOMString>;
+  static void clear();
+};
+
+interface ClearL {
+  readonly setlike<DOMString>;
+  static readonly attribute long clear;
+};
+
+interface ClearM1 {
+  static void clear();
+};
+
+interface ClearM2 : ClearM1 {
+  readonly setlike<DOMString>;
+};
+
+interface ClearN1 {
+  static readonly attribute long clear;
+};
+
+interface ClearN2 : ClearN1 {
+  readonly setlike<DOMString>;
+};
