@@ -7,15 +7,3 @@ interface ForEachB {
   readonly setlike<DOMString>;
   static readonly attribute long forEach;
 };
-
-interface ForEachE : ReadOnly {
-  void forEach();
-};
-
-interface ForEachF : ReadOnly {
-  readonly attribute long forEach;
-};
-
-interface ForEachG : ReadOnly {
-  const long forEach = 0;
-};

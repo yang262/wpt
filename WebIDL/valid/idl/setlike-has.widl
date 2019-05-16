@@ -7,15 +7,3 @@ interface HasB {
   readonly setlike<DOMString>;
   static readonly attribute long has;
 };
-
-interface HasE : ReadOnly {
-  void has();
-};
-
-interface HasF : ReadOnly {
-  readonly attribute long has;
-};
-
-interface HasG : ReadOnly {
-  const long has = 0;
-};

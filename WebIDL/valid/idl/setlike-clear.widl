@@ -38,40 +38,28 @@ interface ClearG : ReadOnly {
   const long clear = 0;
 };
 
-interface ClearH : ReadWrite {
-  void clear();
-};
-
-interface ClearI : ReadWrite {
-  readonly attribute long clear;
-};
-
-interface ClearJ : ReadWrite {
-  const long clear = 0;
-};
-
-interface ClearK {
+interface ClearH {
   readonly setlike<DOMString>;
   static void clear();
 };
 
-interface ClearL {
+interface ClearI {
   readonly setlike<DOMString>;
   static readonly attribute long clear;
 };
 
-interface ClearM1 {
+interface ClearJ1 {
   static void clear();
 };
 
-interface ClearM2 : ClearM1 {
+interface ClearJ2 : ClearJ1 {
   readonly setlike<DOMString>;
 };
 
-interface ClearN1 {
+interface ClearK1 {
   static readonly attribute long clear;
 };
 
-interface ClearN2 : ClearN1 {
+interface ClearK2 : ClearK1 {
   readonly setlike<DOMString>;
 };

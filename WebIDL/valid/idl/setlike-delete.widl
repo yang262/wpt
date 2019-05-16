@@ -38,40 +38,28 @@ interface DeleteG : ReadOnly {
   const long delete = 0;
 };
 
-interface DeleteH : ReadWrite {
-  void delete();
-};
-
-interface DeleteI : ReadWrite {
-  readonly attribute long delete;
-};
-
-interface DeleteJ : ReadWrite {
-  const long delete = 0;
-};
-
-interface DeleteK {
+interface DeleteH {
   readonly setlike<DOMString>;
   static void delete();
 };
 
-interface DeleteL {
+interface DeleteI {
   readonly setlike<DOMString>;
   static readonly attribute long delete;
 };
 
-interface DeleteM1 {
+interface DeleteJ1 {
   static void delete();
 };
 
-interface DeleteM2 : DeleteM1 {
+interface DeleteJ2 : DeleteJ1 {
   readonly setlike<DOMString>;
 };
 
-interface DeleteN1 {
+interface DeleteK1 {
   static readonly attribute long delete;
 };
 
-interface DeleteN2 : DeleteN1 {
+interface DeleteK2 : DeleteK1 {
   readonly setlike<DOMString>;
 };

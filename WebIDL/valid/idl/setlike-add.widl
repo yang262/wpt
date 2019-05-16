@@ -38,40 +38,28 @@ interface AddG : ReadOnly {
   const long add = 0;
 };
 
-interface AddH : ReadWrite {
-  void add();
-};
-
-interface AddI : ReadWrite {
-  readonly attribute long add;
-};
-
-interface AddJ : ReadWrite {
-  const long add = 0;
-};
-
-interface AddK {
+interface AddH {
   readonly setlike<DOMString>;
   static void add();
 };
 
-interface AddL {
+interface AddI {
   readonly setlike<DOMString>;
   static readonly attribute long add;
 };
 
-interface AddM1 {
+interface AddJ1 {
   static void add();
 };
 
-interface AddM2 : AddM1 {
+interface AddJ2 : AddJ1 {
   readonly setlike<DOMString>;
 };
 
-interface AddN1 {
+interface AddK1 {
   static readonly attribute long add;
 };
 
-interface AddN2 : AddN1 {
+interface AddK2 : AddK1 {
   readonly setlike<DOMString>;
 };

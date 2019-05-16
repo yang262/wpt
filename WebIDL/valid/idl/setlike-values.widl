@@ -7,15 +7,3 @@ interface ValuesB {
   readonly setlike<DOMString>;
   static readonly attribute long values;
 };
-
-interface ValuesE : ReadOnly {
-  void values();
-};
-
-interface ValuesF : ReadOnly {
-  readonly attribute long values;
-};
-
-interface ValuesG : ReadOnly {
-  const long values = 0;
-};

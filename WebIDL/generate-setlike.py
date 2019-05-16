@@ -3,10 +3,6 @@ import os
 here = os.path.dirname(__file__)
 
 readonly_template = """\
-interface ReadOnly {{
-  readonly setlike<DOMString>;
-}};
-
 interface {interface}A {{
   readonly setlike<DOMString>;
   static void {method}();
@@ -15,18 +11,6 @@ interface {interface}A {{
 interface {interface}B {{
   readonly setlike<DOMString>;
   static readonly attribute long {method};
-}};
-
-interface {interface}C : ReadOnly {{
-  void {method}();
-}};
-
-interface {interface}D : ReadOnly {{
-  readonly attribute long {method};
-}};
-
-interface {interface}E : ReadOnly {{
-  const long {method} = 0;
 }};
 """
 
@@ -71,41 +55,29 @@ interface {interface}G : ReadOnly {{
   const long {method} = 0;
 }};
 
-interface {interface}H : ReadWrite {{
-  void {method}();
-}};
-
-interface {interface}I : ReadWrite {{
-  readonly attribute long {method};
-}};
-
-interface {interface}J : ReadWrite {{
-  const long {method} = 0;
-}};
-
-interface {interface}K {{
+interface {interface}H {{
   readonly setlike<DOMString>;
   static void {method}();
 }};
 
-interface {interface}L {{
+interface {interface}I {{
   readonly setlike<DOMString>;
   static readonly attribute long {method};
 }};
 
-interface {interface}M1 {{
+interface {interface}J1 {{
   static void {method}();
 }};
 
-interface {interface}M2 : {interface}M1 {{
+interface {interface}J2 : {interface}J1 {{
   readonly setlike<DOMString>;
 }};
 
-interface {interface}N1 {{
+interface {interface}K1 {{
   static readonly attribute long {method};
 }};
 
-interface {interface}N2 : {interface}N1 {{
+interface {interface}K2 : {interface}K1 {{
   readonly setlike<DOMString>;
 }};
 """

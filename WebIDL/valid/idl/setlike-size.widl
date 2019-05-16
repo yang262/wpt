@@ -7,15 +7,3 @@ interface SizeB {
   readonly setlike<DOMString>;
   static readonly attribute long size;
 };
-
-interface SizeE : ReadOnly {
-  void size();
-};
-
-interface SizeF : ReadOnly {
-  readonly attribute long size;
-};
-
-interface SizeG : ReadOnly {
-  const long size = 0;
-};
