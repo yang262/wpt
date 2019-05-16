@@ -107,7 +107,7 @@ tests = [
 
 for (members, template) in tests:
     for method in members:
-        path = "{here}/valid/idl/setlike-{method}.widl".format(here=here, method=method)
+        path = "{here}/../valid/idl/setlike-{method}.widl".format(here=here, method=method)
         test = template.format(method=method, interface=transform(method))
         with open(path, "wb") as f:
             f.write(test.encode("utf8"))
