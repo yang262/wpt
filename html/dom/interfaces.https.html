@@ -40,6 +40,8 @@ idl_test(
   ['html'],
   ['SVG', 'cssom', 'touch-events', 'uievents', 'dom', 'xhr'],
   async idlArray => {
+    idlArray.add_untested_idls('typedef Window WindowProxy;');
+    
     idlArray.add_objects({
       NodeList: ['document.getElementsByName("name")'],
       HTMLAllCollection: ['document.all'],
