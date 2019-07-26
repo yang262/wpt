@@ -29,8 +29,8 @@ async function waitUntilStableAutofocusState(w) {
   await waitForAnimationFrame(targetWindow);
 }
 
-function timeOut(ms) {
+function timeOut(test, ms) {
   return new Promise((resolve, reject) => {
-    setTimeout(resolve, ms);
+    test.step_timeout(resolve, ms);
   });
 }
