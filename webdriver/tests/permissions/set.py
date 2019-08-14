@@ -31,6 +31,7 @@ def query(session, name):
     { "descriptor": { "name": "geolocation" }, "state": "granted", "oneRealm": 23 }
 ])
 def test_invalid_parameters(session, parameters):
+    session.url = "about:blank"
     response = session.transport.send(
         "POST",
         "/session/{session_id}/permissions".format(**vars(session)),
@@ -58,6 +59,7 @@ def test_non_secure_context(session, url, state):
     {}
 ])
 def test_set_to_state(session, state, realmSetting):
+    session.url = "about:blank"
     parameters = { "descriptor": { "name": "geolocation" }, "state": state }
     parameters.update(realmSetting)
     response = session.transport.send(
@@ -96,6 +98,7 @@ def test_set_to_state(session, state, realmSetting):
     {}
 ])
 def test_set_to_state_cross_realm(session, create_window, state, realmSetting):
+    session.url = "about:blank"
     original_window = session.window_handle
     session.window_handle = create_window()
     parameters = { "descriptor": { "name": "geolocation" }, "state": state }
