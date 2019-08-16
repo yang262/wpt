@@ -236,10 +236,10 @@ IdlArray.prototype.is_excluded_by_options = function (name, options)
 
 IdlArray.prototype.add_dependency_idls = function(raw_idls, options)
 {
-    return this.add_dependency_idls_parsed(WebIDL2.parse(raw_idls), options);
+    return this.internal_add_dependency_idls(WebIDL2.parse(raw_idls), options);
 };
 
-IdlArray.prototype.add_dependency_idls_parsed = function(parsed_idls, options)
+IdlArray.prototype.internal_add_dependency_idls = function(parsed_idls, options)
 {
     const new_options = { only: [] }
 
@@ -3306,7 +3306,7 @@ function idl_test(srcs, deps, idl_setup_func) {
                     idl_array.internal_add_idls(astArray[i], options);
                 }
                 for (var i = srcs.length; i < srcs.length + deps.length; i++) {
-                    idl_array.add_dependency_idls_parsed(astArray[i], options);
+                    idl_array.internal_add_dependency_idls(astArray[i], options);
                 }
             })
             .then(function() {
