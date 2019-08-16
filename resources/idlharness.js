@@ -3303,7 +3303,7 @@ function idl_test(srcs, deps, idl_setup_func) {
                     setup_error = setup_error || new Error(message);
                 }
                 for (var i = 0; i < srcs.length; i++) {
-                    idl_array.internal_add_idls(astArray[i]);
+                    idl_array.internal_add_idls(astArray[i], options);
                 }
                 for (var i = srcs.length; i < srcs.length + deps.length; i++) {
                     idl_array.add_dependency_idls_parsed(astArray[i], options);
