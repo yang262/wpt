@@ -3300,7 +3300,7 @@ function idl_test(srcs, deps, idl_setup_func) {
                 const validations = WebIDL2.validate(astArray);
                 if (validations.length) {
                     const message = validations.map(v => v.message).join("\n\n");
-                    throw new Error(message);
+                    setup_error = setup_error || new Error(message);
                 }
                 for (var i = 0; i < srcs.length; i++) {
                     idl_array.internal_add_idls(astArray[i]);
