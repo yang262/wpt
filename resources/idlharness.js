@@ -3306,7 +3306,7 @@ function idl_test(srcs, deps, idl_setup_func) {
                     idl_array.internal_add_idls(astArray[i]);
                 }
                 for (var i = srcs.length; i < srcs.length + deps.length; i++) {
-                    idl_array.internal_add_dependency_idls(astArray[i], options);
+                    idl_array.internal_add_dependency_idls(astArray[i]);
                 }
             })
             .then(function() {
