@@ -266,7 +266,7 @@
      * @returns {Actions}
      */
     pointerMove: function(x, y,
-                          {origin="viewport", duration, sourceName=null}={}) {
+                          {origin="viewport", duration=30, sourceName=null}={}) {
       let source = this.getSource("pointer", sourceName);
       source.pointerMove(this, x, y, duration, origin);
       return this;
